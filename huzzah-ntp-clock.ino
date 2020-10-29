@@ -23,16 +23,7 @@ const uint8_t ntpInterval = 5; // minutes
 // ESP8266 microseconds of compensation per sleep-cycle minute
 const uint16_t espOffset  = 2000000; // microseconds
 
-// Struct to store ESP8266 rst_info
-struct rst_info {
-  uint32 reason;
-  uint32 exccause;
-  uint32 epc1;
-  uint32 epc2;
-  uint32 epc3;
-  uint32 excvaddr;
-  uint32 depc;
-} *rsti;
+rst_info *rsti;
 
 // Struct to store time, mostly for ESP8266 RTC memory
 struct {
